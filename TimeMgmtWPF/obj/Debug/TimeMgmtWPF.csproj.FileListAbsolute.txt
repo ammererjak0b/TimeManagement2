@@ -1,0 +1,11 @@
+D:\repos\TimeManagement\TimeMgmtWPF\obj\Debug\TimeMgmtWPF.csproj.SuggestedBindingRedirects.cache
+D:\repos\TimeManagement\TimeMgmtWPF\obj\Debug\MainWindow.g.cs
+D:\repos\TimeManagement\TimeMgmtWPF\obj\Debug\Pages\UserSettings.g.cs
+D:\repos\TimeManagement\TimeMgmtWPF\obj\Debug\Pages\Login.g.cs
+D:\repos\TimeManagement\TimeMgmtWPF\obj\Debug\Pages\Overview.g.cs
+D:\repos\TimeManagement\TimeMgmtWPF\obj\Debug\Pages\Register.g.cs
+D:\repos\TimeManagement\TimeMgmtWPF\obj\Debug\Pages\Settings.g.cs
+D:\repos\TimeManagement\TimeMgmtWPF\obj\Debug\App.g.cs
+D:\repos\TimeManagement\TimeMgmtWPF\obj\Debug\TimeMgmtWPF_MarkupCompile.cache
+D:\repos\TimeManagement\TimeMgmtWPF\obj\Debug\TimeMgmtWPF_MarkupCompile.lref
+D:\repos\TimeManagement\TimeMgmtWPF\obj\Debug\TimeMgmtWPF.csproj.AssemblyReference.cache

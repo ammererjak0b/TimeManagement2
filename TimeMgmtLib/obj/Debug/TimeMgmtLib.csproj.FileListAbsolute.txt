@@ -1,0 +1,2 @@
+D:\repos\TimeManagement\TimeMgmtLib\obj\Debug\TimeMgmtLib.csproj.CoreCompileInputs.cache
+D:\repos\TimeManagement\TimeMgmtLib\obj\Debug\TimeMgmtLib.csproj.AssemblyReference.cache

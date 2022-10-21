@@ -1,0 +1,36 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TimeMgmtWPF.Windows"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="TimeMgmtWPF.Windows.Homepage"
+      
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Homepage">
+
+    <Grid>
+        <Label x:Name="lblTitle" Style="{DynamicResource LabelStyle}" Content="Time Management" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="35"/>
+
+        <Label x:Name="lblDate" Style="{DynamicResource LabelStyle}" Content="Date:" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="52"/>
+        <DatePicker x:Name="dpDate" Style="{DynamicResource DateStyle}" HorizontalAlignment="Left" Margin="69,74,0,0" VerticalAlignment="Top" Width="147"/>
+
+        <Label x:Name="lblCheckIn" Style="{DynamicResource LabelStyle}" Content="Arrive:" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.484,0.681" Width="52"/>
+
+        <Label x:Name="lblCheckOut" Style="{DynamicResource LabelStyle}" Content="Leave:" HorizontalAlignment="Left" Margin="11,161,0,0" VerticalAlignment="Top" Width="51"/>
+
+        <xctk:IntegerUpDown x:Name="upDownArriveHours" Style="{DynamicResource UpDownDesign}" HorizontalAlignment="Left" Margin="69,118,0,0" VerticalAlignment="Top" Width="52" Height="28" RenderTransformOrigin="1.238,0.59" ToolTip="HH"/>
+        <xctk:IntegerUpDown x:Name="upDownArriveMinutes" Style="{DynamicResource UpDownDesign}" HorizontalAlignment="Left" Margin="126,118,0,0" VerticalAlignment="Top" Width="52" Height="28" RenderTransformOrigin="1.238,0.59" ToolTip="MM"/>
+
+        <xctk:IntegerUpDown x:Name="upDownLeaveHours" Style="{DynamicResource UpDownDesign}" HorizontalAlignment="Left" Margin="69,163,0,0" VerticalAlignment="Top" Width="52" Height="28" RenderTransformOrigin="1.238,0.59" ToolTip="HH"/>
+        <xctk:IntegerUpDown x:Name="upDownLeaveMinutes" Style="{DynamicResource UpDownDesign}" HorizontalAlignment="Left" Margin="126,163,0,0" VerticalAlignment="Top" Width="52" Height="28" RenderTransformOrigin="1.238,0.59" ToolTip="MM"/>
+
+
+
+
+
+
+
+    </Grid>
+</Page>

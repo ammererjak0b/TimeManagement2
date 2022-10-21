@@ -1,0 +1,2 @@
+D:\repos\TimeManagement\TimeMgmtConsole\obj\Debug\TimeMgmtConsole.csproj.SuggestedBindingRedirects.cache
+D:\repos\TimeManagement\TimeMgmtConsole\obj\Debug\TimeMgmtConsole.csproj.CoreCompileInputs.cache

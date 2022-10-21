@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6e18c67c-7fcf-4121-a7bf-0e4cc2122342": {
+      "ProjectGuid": "6e18c67c-7fcf-4121-a7bf-0e4cc2122342",
+      "DisplayName": "TimeMgmtLib",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "4ec29799-3b5b-4baf-9e86-931d297fe1e7": {
+      "ProjectGuid": "4ec29799-3b5b-4baf-9e86-931d297fe1e7",
+      "DisplayName": "TimeMgmtWPF",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

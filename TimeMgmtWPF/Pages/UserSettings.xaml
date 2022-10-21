@@ -1,0 +1,38 @@
+﻿<Page x:Class="TimeMgmtWPF.Pages.ChangePassword"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TimeMgmtWPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ChangePassword">
+
+    <Grid>
+        <PasswordBox x:Name="txtOldPw" Style="{DynamicResource PwTextBoxStyle}" HorizontalAlignment="Left" Margin="307,171,0,0" VerticalAlignment="Top" Width="200" Height="20"/>
+        <PasswordBox x:Name="txtPw" Style="{DynamicResource PwTextBoxStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="20" Margin="307,196,0,0"/>
+        <PasswordBox x:Name="txtConfirmPW" Style="{DynamicResource PwTextBoxStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="20" Margin="307,221,0,0"/>
+
+        <Label x:Name="lblOldPassword" Style="{DynamicResource LabelStyle}" Content="Old Password:" HorizontalAlignment="Left" Margin="161,166,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label x:Name="lblPassword" Style="{DynamicResource LabelStyle}" Content="Password:" HorizontalAlignment="Left" Margin="161,191,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label x:Name="lblConfirmPw" Style="{DynamicResource LabelStyle}" Content="Password Confirm:" HorizontalAlignment="Left" Margin="161,216,0,0" VerticalAlignment="Top" Width="139"/>
+
+        <Label x:Name="lblTitle" Style="{DynamicResource LabelStyle}" Content="User Settings" HorizontalAlignment="Left" Margin="159,27,0,0" VerticalAlignment="Top" FontSize="35"/>
+        <Label x:Name="lblInfo" Style="{DynamicResource LabelStyleSub}" HorizontalAlignment="Left" Margin="581,344,0,0" VerticalAlignment="Top">
+            <Hyperlink NavigateUri="Settings.Xaml">Go back to settings:</Hyperlink>
+        </Label>
+        <CheckBox x:Name="checkStayLogged" Style="{DynamicResource CheckBoxStyle}" Content="Stay logged in?" HorizontalAlignment="Left" Margin="307,246,0,0" VerticalAlignment="Top" Width="91" Height="15"/>
+        <Button x:Name="btnSubmit" Style="{DynamicResource IconButtonsStyle}" Content="{DynamicResource ChangePwSubmit}" HorizontalAlignment="Left" Margin="482,241,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="txtPrename" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Margin="307,121,0,0" VerticalAlignment="Top" Width="200" Height="20"/>
+        <TextBox x:Name="txtSurname" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Margin="307,146,0,0" VerticalAlignment="Top" Width="200" Height="20"/>
+        <Label x:Name="lblPrename" Style="{DynamicResource LabelStyle}" Content="Prename:" HorizontalAlignment="Left" Margin="161,116,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label x:Name="lblSurname" Style="{DynamicResource LabelStyle}" Content="Surname:" HorizontalAlignment="Left" Margin="161,141,0,0" VerticalAlignment="Top" Width="139"/>
+
+        <TextBox x:Name="txtPersonal" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left" Margin="307,96,0,0" VerticalAlignment="Top" Width="200" Height="20"/>
+        <Label x:Name="lblPersonal" Style="{DynamicResource LabelStyle}" Content="Personal Id:" HorizontalAlignment="Left" Margin="161,91,0,0" VerticalAlignment="Top" Width="139"/>
+
+
+
+    </Grid>
+</Page>
