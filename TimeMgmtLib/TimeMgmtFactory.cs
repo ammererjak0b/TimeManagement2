@@ -1,8 +1,8 @@
-﻿using TimeMgmtLib.Models;
-using Autofac;
+﻿using Autofac;
+using NLog;
 using TimeMgmtLib.Appconfig;
 using TimeMgmtLib.DataAccess;
-using System;
+using TimeMgmtLib.Models;
 
 namespace TimeMgmtLib
 {
@@ -12,6 +12,9 @@ namespace TimeMgmtLib
     /// </summary>
     public class TimeMgmtFactory
     {
+        private static readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+
+
         private IUser _user;
 
         private static TimeMgmtFactory _instance;
@@ -80,6 +83,8 @@ namespace TimeMgmtLib
             _builder.RegisterType<AppConfigHandler>().As<IAppConfigHandler>().SingleInstance();
 
             _container = _builder.Build();
+
+            _logger.Info("services initialized");
         }
 
         /// <summary>

@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TimeMgmtLib</name>
+    </assembly>
+    <members>
+        <member name="M:TimeMgmtLib.Appconfig.AppConfigHandler.GetValueFromKey(System.String)">
+            <summary>
+            The function returns the stored value in the app config from the given key.
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:TimeMgmtLib.DataAccess.DBDataHandler">
+            <summary>
+            This class is implementing the IDataAccessable interface. 
+            It contains all the funktionalities that are needed when accessing the data in the database.
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.DataAccess.DBDataHandler.#ctor(TimeMgmtLib.DataAccess.IDBAccessable)">
+            <summary>
+            This constructor will be called when resolving the class in TimeMgmtFactory. IDBAccessable will then be given automaticly.
+            </summary>
+            <param name="db"></param>
+        </member>
+        <member name="M:TimeMgmtLib.DataAccess.DBDataHandler.GetSpecificTimestamp(System.DateTime,TimeMgmtLib.Models.IUser)">
+            <summary>
+            With the parameters date and user a specific timestamp can be selected and returned
+            </summary>
+            <param name="date"></param>
+            <param name="user"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:TimeMgmtLib.DataAccess.DBDataHandler.GetTimestamp(TimeMgmtLib.Models.IUser)">
+            <summary>
+            A list of timestamps of that user will be selected and returned
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:TimeMgmtLib.DataAccess.DBDataHandler.GetTimestamp(System.DateTime,TimeMgmtLib.Models.IUser)">
+            <summary>
+            With the parameters date and user a list of timestamps(beginning with the given date and ending with today) can be selected and 
+            </summary>
+            <param name="date"></param>
+            <param name="user"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:TimeMgmtLib.DataAccess.DBDataHandler.GetUser(TimeMgmtLib.Models.IUser)">
+            <summary>
+            Selects and returns the user from the database
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:TimeMgmtLib.DataAccess.DBDataHandler.RegisterUser(TimeMgmtLib.Models.IUser)">
+            <summary>
+            inserts a new user in the database table users
+            </summary>
+            <param name="user"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:TimeMgmtLib.DataAccess.DBDataHandler.ModifyUser(TimeMgmtLib.Models.IUser)">
+            <summary>
+            updates an existing user in the database
+            </summary>
+            <param name="user"></param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:TimeMgmtLib.DataAccess.IDBAccessable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TimeMgmtLib.DataAccess.IDataAccessable">
+            <summary>
+            This interface contains all the functionalities of a data accessable class
+            Because using interfaces we are not dependant of specific implementations
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.DataAccess.IDataAccessable.GetUser(TimeMgmtLib.Models.IUser)">
+            <summary>
+            Selects and returns the user from the database
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TimeMgmtLib.DataAccess.IDataAccessable.GetSpecificTimestamp(System.DateTime,TimeMgmtLib.Models.IUser)">
+            <summary>
+            With the parameters date and user a specific timestamp can be selected and returned
+            </summary>
+            <param name="date"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TimeMgmtLib.DataAccess.IDataAccessable.GetTimestamp(TimeMgmtLib.Models.IUser)">
+            <summary>
+            A list of timestamps of that user will be selected and returned
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TimeMgmtLib.DataAccess.IDataAccessable.GetTimestamp(System.DateTime,TimeMgmtLib.Models.IUser)">
+            <summary>
+            With the parameters date and user a list of timestamps(beginning with the given date and ending with today) can be selected and 
+            </summary>
+            <param name="date"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TimeMgmtLib.Models.ITimestamp">
+            <summary>
+            This interface contains all the functionalities of a timestamp
+            Because using interfaces we are not dependant of specific implementations
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.Models.ITimestamp.SetCheckIn(TimeMgmtLib.Models.CheckTime)">
+            <summary>
+            sets checkIn and recalculates workhours
+            </summary>
+            <param name="checkIn"></param>
+        </member>
+        <member name="M:TimeMgmtLib.Models.ITimestamp.SetCheckOut(TimeMgmtLib.Models.CheckTime)">
+            <summary>
+            sets checkOut and recalculates workhours
+            </summary>
+            <param name="checkOut"></param>
+        </member>
+        <member name="T:TimeMgmtLib.Models.TimeStampPeriod">
+            <summary>
+            This enum is implemented, so the form just needs to set one of this 4 values
+            </summary>
+        </member>
+        <member name="F:TimeMgmtLib.Models.TimeStampPeriod.OneWeek">
+            <summary>
+            _timestamps will be filled with rows of last week of the user
+            </summary>
+        </member>
+        <member name="F:TimeMgmtLib.Models.TimeStampPeriod.OneMonth">
+            <summary>
+            _timestamps will be filled with rows of last month of the user
+            </summary>
+        </member>
+        <member name="F:TimeMgmtLib.Models.TimeStampPeriod.OneYear">
+            <summary>
+            _timestamps will be filled with rows of last year of the user
+            </summary>
+        </member>
+        <member name="F:TimeMgmtLib.Models.TimeStampPeriod.Everything">
+            <summary>
+            _timestamps will be filled with every row of the user
+            </summary>
+        </member>
+        <member name="T:TimeMgmtLib.Models.TimestampHandler">
+            <summary>
+            This class implements the functionality of ITimestampHandler
+            and handles the information in form of lists for graphs
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.Models.TimestampHandler.SetTimeDuration(TimeMgmtLib.Models.TimeStampPeriod)">
+            <summary>
+            this method must be called before trying to get any Timstamp Information
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:TimeMgmtLib.Models.TimestampHandler.FillTimeStamps">
+            <summary>
+            filling _timestamps with database data of current user
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.Models.TimestampHandler.CalcDate">
+            <summary>
+            substract requested timespan from current date
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.Models.TimestampHandler.GetCheckIn">
+            <summary>
+            This method returns the checkIn time in form of a double List, so it can be directly put in the graph
+            </summary>
+            <returns>double List</returns>
+        </member>
+        <member name="M:TimeMgmtLib.Models.TimestampHandler.GetCheckOut">
+            <summary>
+            This method returns the checkIn time in form of a double List, so it can be directly put in the graph
+            </summary>
+            <returns>double List</returns>
+        </member>
+        <member name="M:TimeMgmtLib.Models.TimestampHandler.GetFlexibleHours">
+            <summary>
+            This method returns the flexibleHours in form of a double List, so it can be directly put in the graph
+            </summary>
+            <returns>double List</returns>
+        </member>
+        <member name="M:TimeMgmtLib.Models.TimestampHandler.GetFlexibleHoursPerDay">
+            <summary>
+            This method returns the flexibleHours/day in form of a double List, so it can be directly put in the graph
+            </summary>
+            <returns>double List</returns>
+        </member>
+        <member name="T:TimeMgmtLib.Models.IUser">
+            <summary>
+            This interface contains all the functionalities of a user
+            Because using interfaces we are not dependant of specific implementations
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.Models.IUser.Login">
+            <summary>
+            Sets the login state on true
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.Models.IUser.Register(System.String,System.String,System.DateTime,System.Double)">
+            <summary>
+            registers the user and safes it so he can login from now on
+            </summary>
+            <param name="prename"></param>
+            <param name="surname"></param>
+            <param name="registrationDate"></param>
+            <param name="flexibleHoursAtRegistration"></param>
+        </member>
+        <member name="T:TimeMgmtLib.Models.Timestamp">
+            <summary>
+            This class represents one Timestamp that the user submits to the database.
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.Models.Timestamp.#ctor(System.Int32,System.DateTime,TimeMgmtLib.Models.CheckTime,TimeMgmtLib.Models.CheckTime)">
+            <summary>
+            this constructor will be called when a user creates a new timestamp
+            </summary>
+            <param name="timestampId"></param>
+            <param name="personalId"></param>
+            <param name="date"></param>
+            <param name="checkIn"></param>
+            <param name="checkOut"></param>
+        </member>
+        <member name="M:TimeMgmtLib.Models.Timestamp.#ctor(System.Data.DataRow)">
+            <summary>
+            this contsturctor will be called when a timestamp is taken from the database
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="M:TimeMgmtLib.Models.Timestamp.SetCheckIn(TimeMgmtLib.Models.CheckTime)">
+            <summary>
+            sets checkIn and recalculates workhours
+            </summary>
+            <param name="checkIn"></param>
+        </member>
+        <member name="M:TimeMgmtLib.Models.Timestamp.SetCheckOut(TimeMgmtLib.Models.CheckTime)">
+            <summary>
+            sets checkOut and recalculates workhours
+            </summary>
+            <param name="checkOut"></param>
+        </member>
+        <member name="M:TimeMgmtLib.Models.Timestamp.CalculateWorkHours">
+            <summary>
+            With the values of checkOut and checkIn the workHours can be calculated
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.Models.Timestamp.GetBreakMinutes">
+            <summary>
+            Gets the exact amount of break minutes on this day
+            </summary>
+        </member>
+        <member name="T:TimeMgmtLib.Models.User">
+            <summary>
+            This user class represents the user that is currently loged in.
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.Models.User.#ctor(System.Int32,System.String)">
+            <summary>
+            this constructor will be called before the user logs in
+            </summary>
+            <param name="personalId"></param>
+            <param name="password"></param>
+        </member>
+        <member name="M:TimeMgmtLib.Models.User.#ctor(System.Data.DataRow)">
+            <summary>
+            this constructor will be called when a user is pulled from the database
+            </summary>
+            <param name="row"></param>
+        </member>
+        <member name="M:TimeMgmtLib.Models.User.Login">
+            <summary>
+            Sets the login state on true
+            </summary>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:TimeMgmtLib.Models.User.Register(System.String,System.String,System.DateTime,System.Double)">
+            <summary>
+            registers the user and safes it to the database, so he can log in from now on
+            </summary>
+            <param name="prename"></param>
+            <param name="surname"></param>
+            <param name="registrationDate"></param>
+            <param name="flexibleHoursAtRegistration"></param>
+        </member>
+        <member name="M:TimeMgmtLib.Models.User.SetPassword(System.String)">
+            <summary>
+            password will be hashed before assigned to the field
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:TimeMgmtLib.Models.User.HashString(System.String)">
+            <summary>
+            turns a string into a hashed string, using the MD5CryptoServiceProvider
+            </summary>
+            <param name="value"></param>
+            <returns>hashedString</returns>
+        </member>
+        <member name="M:TimeMgmtLib.Models.User.CompareHashValues(System.String,System.String)">
+            <summary>
+            comparing 2 hash strings. If they are the same true will be returned, if not then false.
+            </summary>
+            <param name="soll"></param>
+            <param name="ist"></param>
+            <returns>bool</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:TimeMgmtLib.TimeMgmtFactory" -->
+        <member name="M:TimeMgmtLib.TimeMgmtFactory.#ctor">
+            <summary>
+            The contructor is private, because there is only one way to get a instance of this class
+            </summary>
+        </member>
+        <member name="P:TimeMgmtLib.TimeMgmtFactory.Instance">
+            <summary>
+            This field stores an instance of the TimeMgmtFactory class.
+            </summary>
+        </member>
+        <member name="P:TimeMgmtLib.TimeMgmtFactory.UserInstance">
+            <summary>
+            This field stores an instance of the user that is logged in.
+            Through out the whole application it is possible to access the user.
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.TimeMgmtFactory.Initialise">
+            <summary>
+            This method initialises the container.
+            Every implementation of an interface can be registered in this method.
+            </summary>
+        </member>
+        <member name="M:TimeMgmtLib.TimeMgmtFactory.Resolve``1">
+            <summary>
+            This method returns the class that implements an interface that is initialised
+            </summary>
+        </member>
+    </members>
+</doc>
