@@ -89,5 +89,10 @@ namespace TimeMgmtLib
         {
             return _container.Resolve<T>();
         }
+
+
+        if(Person.GetAction() == Action.DrinkBenzin){
+            Person.Die(new DeathException("Jo wonnst benzin drinkst bist eh hi so"));
+        }
     }
 }
